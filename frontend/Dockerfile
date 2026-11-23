@@ -55,9 +55,9 @@ COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 
 RUN mkdir /database
-RUN mkdir -p /app/.next/cache 
+RUN mkdir -p /app/.next/cache
 
-RUN chown -R 1000:1000 /database 
+RUN chown -R 1000:1000 /database
 RUN chown -R 1000:1000 /app
 
 EXPOSE 3000
